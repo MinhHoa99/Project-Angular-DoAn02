@@ -1,0 +1,165 @@
+<style>
+    .col2-news{
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    .news {
+        width: 100%;
+        height: auto;
+        flex: 1;
+    }
+
+    .news .txt1-news {
+        flex: 1;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        align-items: center;
+        background-color: #243c58c7;
+    }
+
+    .txt-p1 {
+        font-weight: bold;
+        color:white;
+        flex: 1;
+        width: 50%;
+        justify-content: flex-start;
+        font-size: 20px;
+        padding-top: 10px;
+        align-items: center !important;
+    }
+
+    .txt-p2 {
+        flex: 1;
+        width: 50%;
+        justify-content: flex-end;
+        font-size: 15px;
+        align-items: center !important;
+    }
+
+    .txt-p2 a {
+        text-decoration: none;
+        color: white;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .txt-p2 a:hover {
+        color: coral;
+    }
+
+    .news-intro {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        flex: 1;
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .news-intro1 {
+        cursor: pointer;
+        flex: 1;
+        width: 50%;
+    }
+
+    .news-intro1 img {
+        width: 98%;
+    }
+
+    .news-intro2 {
+        background-color: white;
+        flex: 1;
+        width: 49%;
+        height: auto;
+    }
+
+    .row-intro2 {
+        border-bottom: 1px solid rgb(145, 142, 142);
+        flex: 1;
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .col1-news {
+        flex: 1;
+        height: 100%;
+    }
+
+    .col1-news img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .col2-news {
+        cursor: pointer;
+        font-family: 'Times New Roman', Times, serif;
+        padding-left: 10px;
+        flex: 3;
+        height: 100%;
+        padding-bottom: 10px;
+    }
+
+    .row-intro2:hover {
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(114, 110, 110, 0.267);
+    }
+
+    .col2-news h4 {
+        font-weight: bold;
+        color: rgb(59, 58, 58);
+    }
+</style>
+<div class="container">
+    <app-slide></app-slide>
+    <app-item-list></app-item-list>
+    <div class="news">
+        <div class="txt1-news">
+            <div class="txt-p1">
+                <p>TIN CÔNG NGHỆ</p>
+            </div>
+            <div class="txt-p2"><a href="#">Xem tất cả</a></div>
+        </div>
+        <div class="news-intro">
+            <div class="news-intro1">
+                <div class="news-intro1-img">
+                    <img src="https://cdn.tgdd.vn/Files/2021/06/01/1356608/galaxys21ultra_800x450-600x400.jpg" alt="">
+                </div>
+            </div>
+            <div class="news-intro2">
+                <div class="row-intro2">
+                    <div class="col1-news">
+                        <img src="https://cdn.tgdd.vn/Files/2021/06/05/1357557/thumbreview_800x450-300x200.jpg" alt="">
+                    </div>
+                    <div class="col2-news">
+                        <h4>Tất Tần Tật: Những điều bạn cần biết về Xiaomi Mi 11X và Mi 11X Pro</h4>
+                        <p>Những chiếc smartphone đến từ Xiaomi chưa bao giờ là hết hot với cấu hình mạnh mẽ, thiết kế ưa nhìn đi kèm với một mức giá phải chăng.</p>
+                        <p>13/04/2021</p>
+                    </div>
+                </div>
+                <div class="row-intro2">
+                    <div class="col1-news">
+                        <img src="https://cdn.tgdd.vn/Files/2021/06/03/1357104/danh-gia-chi-tiet-xiaomi-redmi-note-10s_800x450-300x200.jpg" alt="">
+                    </div>
+                    <div class="col2-news">
+                        <h4>Đánh giá chi tiết Xiaomi Redmi Note 10S</h4>
+                        <p>Hơn 6 triệu mà đã có chip chuyên chơi game cùng viên pin hoạt động liên tục hơn 10 tiếng rưỡi.</p>
+                        <p>22/05/2021</p>
+                    </div>
+                </div>
+                <div class="row-intro2">
+                    <div class="col1-news">
+                        <img src="https://cdn.tgdd.vn/Files/2021/06/07/1358168/s21fe2_800x450-300x200.jpg" alt="">
+                    </div>
+                    <div class="col2-news">
+                        <h4>Galaxy S21 FE lộ thêm ảnh render 360 độ</h4>
+                        <p>Galaxy S21 FE đã từng lộ ảnh render bởi trang OnLeaks vào tháng 4. Mới đây, một leaker khác khá uy tín là evLeaks cũng vừa đăng tải hình ảnh 3D của máy, cho chúng ta cái nhìn chi tiết hơn về thiết kế của phiên bản Galaxy S21 Fan Edition.</p>
+                        <p>13/04/2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+<style>
+    .presentation {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        height: 100vh;
+    }
+
+    .introduction {
+        margin-top: 130px;
+        flex: 1;
+    }
+
+    .intro-text h1{
+        font-size: 40px;
+        font-weight: bold;
+        color: #5c5c7e;
+        margin-bottom: 15px;
+    }
+
+    .intro-text p {
+        font-size: 22px;
+        color: #5c5c7e;
+    }
+
+    .select {
+        border: 2px solid #3a545f;
+        background: transparent;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+
+    .add {
+        background: #3a545f;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        color: whitesmoke;
+        border: 0px;
+        margin: 30px 0px 0px 16px;
+        border-radius: 12px;
+    }
+
+    .cover img {
+        margin-top: 50px;
+        height: 65vh;
+        animation: drop 1.5s ease;
+        transition: transform .3s ease-out;
+    }
+
+    .cover img:hover{
+        -ms-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+
+    }
+
+    .select:hover {
+        color: white;
+        background-color: #3a545f;
+    }
+
+    .add:hover {
+        background-color: whitesmoke;
+        border: 2px solid #3a545f;
+        color: #3a545f;
+
+    }
+
+    @keyframes drop {
+        0% {
+            opacity: 0;
+            ;
+            transform: translateY(-80px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+</style>
+<section class="presentation">
+    <div class="introduction">
+        <div class="intro-text">
+            <h1>Samsung Galaxy Note 20 Ultra</h1>
+            <p>Galaxy Note 20 Ultra là phiên bản tiếp theo cao cấp hơn thuộc dòng Note 20 Series của Samsung, với nhiều thay đổi, từ cụm camera hỗ trợ lấy nét laser AF cùng ống kính góc rộng mới, màn hình tràn viền lên đến 6.9 inch.</p>
+        </div>
+        <div class="cta">
+            <button class="select">Detail</button>
+            <button class="add">Add</button>
+        </div>
+    </div>
+    <div class="cover">
+        <img src="assets\img\samsung-galaxy-note-20.jpg" alt="dellxps">
+    </div>
+</section>

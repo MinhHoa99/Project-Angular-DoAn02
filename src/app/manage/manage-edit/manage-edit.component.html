@@ -1,0 +1,108 @@
+<style>
+
+    .row-btn{
+        margin-left: 210px;
+        margin-bottom: 20px;
+        margin-top: 48px;
+    }
+    .save {
+        background-color: #ff8800;
+        width: 100px;
+        height: 40px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        margin-left: 24px;
+    }
+
+    .save:hover{
+        background-color: #5f7ba0;
+    }
+
+    .cancel {
+        background-color: transparent;
+        border:  solid 1px #ff8800 ;
+        color: #ff8800;
+        width: 100px;
+        height: 40px;
+        outline: none;
+        border: none;
+        font-weight: 500;
+    }
+
+    .cancel:hover{
+        background-color: #af4e38;
+    }
+
+    label{
+        font-weight: bold;
+        
+    }
+    .table-1{
+        padding: 24px;
+        border-radius: 16px;
+        border: solid 2px rgb(187, 216, 215);
+    }
+    .form-group{
+        margin-bottom: 30px;      
+    }
+
+    .form-control{
+        width: 100%;
+        border-radius: 0px;
+        border-top: 0px;
+        border-left: none;
+        border-right: none;
+
+    }
+
+    .form-control::placeholder{
+        color: rgb(0, 165, 177);
+        
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-12">
+        <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">          
+            <div class="row">
+                <div class="col-sm-12 table-1">
+                    <div class="form-group">
+                        <input placeholder="Name" type="text" id="name" formControlName="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Category" type="text" id="category" formControlName="category" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Color" type="text" id="color" formControlName="color" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Screen" type="text" id="screen" formControlName="screen" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Chip" type="text" id="chip" formControlName="chip" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Memory" type="text" id="memory" formControlName="memory" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Ram" type="text" id="ram" formControlName="ram" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <input placeholder="ImagePath" type="text" id="imagePath" formControlName="imagePath" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <input placeholder="Price" type="text" id="price" formControlName="price" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-btn">
+                <div class="col-sm-12">                   
+                    <button type="button" class="btn btn-danger cancel"  (click)="onCancel()">Cancel</button>
+                    <button type="submit" class="btn btn-success save mr-1">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>

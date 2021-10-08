@@ -1,0 +1,9 @@
+<app-head (featureSelected)="onNavigate($event)"></app-head>
+<body>
+    <router-outlet *ngIf="loadedFeature==='home'"></router-outlet>
+    <app-cart *ngIf="loadedFeature==='cart-item'"></app-cart>
+    <app-manage *ngIf="loadedFeature === 'manage'"></app-manage>
+</body>
+<footer>
+    <app-footer></app-footer>
+</footer>

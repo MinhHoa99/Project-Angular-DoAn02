@@ -1,0 +1,51 @@
+<style>
+    .my-custom-scrollbar {
+        position: relative;
+        height: 670px;
+        overflow: auto;
+        border-radius: 16px;
+    } 
+
+    .table-wrapper-scroll-y {
+        display: block;
+    }
+
+    .new{
+        background-color: #F29A2E;
+        width: 100px;
+        height: 40px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+    }
+
+    .new:hover{
+        background-color: #ecaf64;
+    }
+
+    .table{
+        outline: none;
+        border-radius: 2%;
+    }
+
+
+</style>
+
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar table">
+            <app-manage-item *ngFor="let items of items1; let i = index" [index]="[i]" [items1]="items">
+            </app-manage-item>
+
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success new" (click)="onNewItem()">New</button>
+    </div>
+</div>

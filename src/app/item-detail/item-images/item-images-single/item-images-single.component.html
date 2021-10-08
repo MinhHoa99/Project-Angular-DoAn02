@@ -1,0 +1,12 @@
+<style>
+    img{
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<div class="col" style="top: 0px;">
+    <a (mouseenter)="onHoverImage()" (mouseleave)="onLeaveImage()">
+        <img [src]="imgUrl" class="img-responsive" style="max-height: 30px;">
+    </a>
+</div>

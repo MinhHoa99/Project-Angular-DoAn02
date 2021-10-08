@@ -1,0 +1,329 @@
+<style>
+    .img {
+        margin-bottom: 30px;
+
+    }
+
+    .form-control {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    .form-control:focus {
+        outline: none;
+    }
+
+    .star-rating {
+        font-size: 0;
+        white-space: nowrap;
+        display: inline-block;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+        background-size: contain;
+    }
+
+    .star-rating i {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1;
+        background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+        background-size: contain;
+    }
+
+    .star-rating input {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        opacity: 0;
+        display: inline-block;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        position: relative;
+    }
+
+    .star-rating input:hover+i,
+    .star-rating input:checked+i {
+        opacity: 1;
+    }
+
+    .star-rating i~i {
+        width: 40%;
+    }
+
+    .star-rating i~i~i {
+        width: 60%;
+    }
+
+    .star-rating i~i~i~i {
+        width: 80%;
+    }
+
+    .star-rating i~i~i~i~i {
+        width: 100%;
+    }
+
+    ::after,
+    ::before {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .star-rating.star-5 {
+        width: 250px;
+    }
+
+    .star-rating.star-5 input,
+    .star-rating.star-5 i {
+        width: 20%;
+    }
+
+    .star-rating.star-5 i~i {
+        width: 40%;
+    }
+
+    .star-rating.star-5 i~i~i {
+        width: 60%;
+    }
+
+    .star-rating.star-5 i~i~i~i {
+        width: 80%;
+    }
+
+    .star-rating.star-5 i~i~i~i~i {
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #506AD4;
+        margin-right: 10px;
+        font-family: monospace;
+        box-shadow: 0 10px 20px -5px #506AD4;
+        outline: none;
+        width: 150px;
+        cursor: pointer;
+    }
+
+
+    #rad {
+        cursor: pointer;
+    }
+
+    .review {
+        border-top: 0px;
+        border-bottom: 1px solid black;
+        border-right: 0px;
+        border-left: 0px;
+        outline: none;
+
+
+    }
+
+    .text-review {
+        border-radius: 10px;
+        box-shadow: 0 10px 20px -15px #7487d1;
+        outline: none;
+        border: 0px;
+        color: black;
+        background-color: whitesmoke;
+    }
+
+    h1 {
+        color: #0367A6;
+        font-weight: bold;
+    }
+
+    .description {
+        background-color: rgba(245, 245, 245, 0.685);
+        border-radius: 10px;
+        padding: 8px;
+        margin-top: 20px;
+        word-wrap: break-word;
+        width: 450px;
+        text-overflow: ellipsis;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+    }
+
+    .spec {
+        text-align: center;
+        margin-top: 30px;
+        font-weight: bold;
+    }
+
+    .add {
+        background-color: tomato;
+        border: 0px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+        padding: 7px;
+        font-size: 15px;
+        box-shadow: 0 10px 20px -5px #8f8f8f;
+
+    }
+
+    .add:hover {
+        background-color: rgb(255, 70, 37);
+    }
+
+    .table2 tbody tr td {
+        border: none;
+    }
+
+    .table2 {
+        border: 1px solid black;
+    }
+
+    .table2 thead tr th {
+        border-top: none;
+    }
+</style>
+
+<div class="container" id="cover" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-xs-2">
+            <img class="img" [src]="inItems.imagePath" alt="{{inItems.name}}" style="width: 400px;height: 400px;">
+            <div class="container">
+                <div class="row">
+                    <app-item-images [items1]="inItems"></app-item-images>
+                </div>
+            </div>
+            <p class="description"> {{inItems.description}}</p>
+            <div class="accessories">
+                <table class="table table2" style="width: 200px;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;" scope="col">Phụ kiện đi kèm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Củ Sạc nhanh</td>
+                        </tr>
+                        <tr>
+                            <td>Cáp sạc nhanh</td>
+                        </tr>
+                        <tr>
+                            <td>Cây lấy sim</td>
+                        </tr>
+                        <tr>
+                            <td>Tai nghe</td>
+                        </tr>
+                        <tr>
+                            <td>Sách hướng dẫn</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-xs-6" id="page2">
+            <div class="container">
+                <h1>{{inItems.name}}</h1>
+                <h6 style="margin-bottom: 20px;">Avg Rating: <b>{{inItems.avg}}</b>, <b>{{inItems.ratingCounter}}</b>
+                    ratings,
+                    <b>{{inItems.reviewCounter}}</b> reviews
+                </h6>
+                <h4 style="margin-bottom: 20px;"><b>Giá: {{inItems.price | currency:"VND"}}</b></h4>
+                <button style="margin-bottom: 20px;" class="add">Thêm vào giỏ hàng</button>
+                <p class="spec">Thông số kỹ thuật</p>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h6>Tên sản phẩm</h6>
+                            </td>
+                            <td>{{inItems.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Hãng</h6>
+                            </td>
+                            <td>{{inItems.category}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Màu</h6>
+                            </td>
+                            <td>{{inItems.color}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Màn hình</h6>
+                            </td>
+                            <td>{{inItems.screen}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Chip xử lý</h6>
+                            </td>
+                            <td>{{inItems.chip}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Bộ nhớ</h6>
+                            </td>
+                            <td>{{inItems.memory}}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Dung lượng Ram</h6>
+                            </td>
+                            <td>{{inItems.ram}}</td>
+                    </tbody>
+                </table>
+
+                <br>
+                <br>
+                <label><i>Give a rating below!!</i></label>
+                <br>
+                <form (ngSubmit)="onSubmitRate(f)" #f="ngForm">
+                    <span class="star-rating star-5">
+                        <input type="radio" name="rate" ngModel id="rad" value="1" required><i></i>
+                        <input type="radio" name="rate" ngModel id="rad" value="2"><i></i>
+                        <input type="radio" name="rate" ngModel id="rad" value="3"><i></i>
+                        <input type="radio" name="rate" ngModel id="rad" value="4"><i></i>
+                        <input type="radio" name="rate" ngModel id="rad" value="5"><i></i>
+                    </span>
+                    <br>
+                    <br>
+                    <input class="btn btn-primary" [disabled]="!f.valid" type="submit" value="Submit">
+                </form>
+                <br>
+                <br>
+                <label><b>Reviews by users:</b></label>
+                <br>
+                <div>
+                    <ul class="list-group" *ngFor="let a of inItems.reviews">
+                        <li class="list-group-item review">
+                            <strong>On {{today|date}} a user commented:</strong>
+                            <br>
+                            {{a}}
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+                <br>
+                <Label for="reviewComment"><b>Leave a review below!</b></Label>
+                <form (ngSubmit)="onSubmitReview(e)" #e="ngForm">
+                    <textarea class="text-review" maxlength="150" name="review" id="reviewComment" cols="40" rows="5"
+                        ngModel required></textarea>
+                    <br>
+                    <br>
+                    <input class="btn btn-primary" [disabled]="!e.valid" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

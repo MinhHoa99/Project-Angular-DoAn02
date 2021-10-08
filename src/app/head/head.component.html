@@ -1,0 +1,118 @@
+<style>
+    .navbar {
+        font-family: 'Nunito Sans', sans-serif;
+        background-color: whitesmoke(54, 54, 253);
+        display: flex;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        background-color: white;
+        font-weight: bold;
+    }
+
+    .brand-title {
+        padding-left: 50px;
+        display: flex;
+        flex: 1;
+    }
+
+    .brand-title a img {
+        width: 80px;
+    }
+
+    .navbar-links {
+        padding-right: 50px;
+        flex: 1;
+    }
+
+    .navbar-links ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .navbar-links li {
+        list-style-type: none;
+    }
+
+    .navbar-links ul li a {
+        font-size: 16px;
+        padding: 1rem;
+        text-decoration: none;
+        color: rgb(48, 48, 48);
+
+    }
+
+    .navbar-links .login {
+        font-size: 25px;
+        margin-left: 100px;
+        color: #3a545f;
+    }
+
+    .toggle-button {
+        position: absolute;
+        top: 1.2rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+    }
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: rgb(0, 150, 137);
+        border-radius: 10px;
+    }
+
+    .navbar .navbar-links li a:hover {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .dropdown-menu{
+        cursor: pointer;
+    }
+</style>
+
+
+<nav class="navbar sticky-top">
+    <div class="brand-title">
+        <a routerLinkActive="active" routerLink="/" (click)="onSelect('home')">
+            <img src="assets\img\logoA.png" alt="">
+        </a>
+    </div>
+    <div class="navbar-links">
+        <ul>
+            <li class="nav-item dropdown" appDropdown>
+                <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item">samSung</a>
+                    <a class="dropdown-item">Apple</a>
+                    <a class="dropdown-item">Xiaomi</a>
+                    <a class="dropdown-item">Sony</a>
+                    <a class="dropdown-item">OPPO</a>
+                </div>
+            </li>
+            <li>
+                <a routerLinkActive="active" routerLink="/manage/0">Manage</a>
+            </li>
+            <li>
+                <a routerLink="/cart-item" (click)="onSelect('cart-item')">Cart</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Sign In</a>
+            </li>
+        </ul>
+    </div>
+</nav>

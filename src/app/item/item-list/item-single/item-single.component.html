@@ -1,0 +1,214 @@
+<style>
+    .conatiner {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .list-group-item {
+        width: 300px;
+        height: 490px;
+        margin: 20px;
+        border: 0px;
+        cursor: pointer;
+        outline: none;
+        transition: transform .4s ease-out;
+
+    }
+
+    .list-group-item:hover
+    {
+        box-shadow: 0 10px 20px -10px #3a545f;
+        outline: none;
+        border-radius: 10px;
+        transition: transform .4s ease-out;
+    }
+
+    .list-group-item:hover .product .list-group-item-heading{
+        color: rgb(1, 143, 1);
+    }
+
+    .box-img {
+        position: relative;
+    }
+
+    .list-group-item:hover .img-responsive{
+        -ms-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+
+
+    }
+
+    .box-img #a1 {
+        position: absolute;
+        top: 187px;
+        left: 0px;
+        font-size: 13px;
+        background-color: #018848;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+        box-shadow: 0 10px 20px -5px #dadadacb;
+
+
+    }
+
+    .box-img #a2 {
+        position: absolute;
+        top: 220px;
+        left: 0px;
+        font-size: 13px;
+        background-color: #ea9d02;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+        box-shadow: 0 10px 20px -5px #c5c5c5cc;
+
+
+    }
+
+    .img-responsive {
+        margin-top: 10px;
+        transition: transform .3s ease-out;
+        width: 100%;
+        height: auto;
+    }
+    .product {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .product a {
+        margin-top: 5px;
+        font-size: 27px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .product a:hover {
+        color: rgb(1, 143, 1);
+    }
+
+
+
+    .product .price {
+        width: 120px;
+        height: 30px;
+        background-color: red;
+        border: 0px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    .product h6 {
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        font-size: 17px;
+        color: white;
+    }
+
+    .product .confi {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        border: 0px;
+        background-color: rgba(245, 245, 245, 0.671);
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .product .confi a {
+        padding: 3px;
+        margin-right: 5px;
+        margin-bottom: 3px;
+        border-radius: 10px;
+        font-size: 13px;
+        border: 1px solid rgba(0, 0, 0, 0.144);
+    }
+
+    .product .fa-star {
+        color: yellow;
+    }
+
+    .btn-primary {
+        background-color: #506AD4;
+        margin-right: 10px;
+        font-family: monospace;
+        outline: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #7487d1;
+        box-shadow: 0 10px 20px -5px #7487d1;
+        outline: none;
+
+    }
+
+    .cart-btn {
+        background-color: yellow;
+        border: 0px;
+        box-shadow: 0 10px 20px -7px rgb(243, 243, 108);
+        outline: none;
+    }
+
+    .cart-btn:hover {
+        background-color: rgb(245, 245, 112);
+        border: 0px;
+        box-shadow: 0 10px 20px -5px rgb(243, 243, 108);
+        outline: none;
+    }
+</style>
+
+<div class="container">
+    
+    <div class="list-group-item clearfix" > 
+        <div class="product">
+            <div class="box-img" [routerLink]="[index]" routerLinkActive="active">
+                <img src="{{items1.imagePath}}" alt="" class="img-responsive">
+                <a id="a1">Trả góp 0%</a>
+                <a id="a2">Voucher 2-10%</a>
+            </div>
+            <a class="list-group-item-heading" [routerLink]="[index]" routerLinkActive="active">{{items1.name}}</a>
+            <br>
+            <button class="price">
+                <h6>{{items1.price | currency:"VND"}}</h6>
+            </button><br>
+            <button class="confi">
+                <a>Screen: {{items1.screen}}</a>
+                <a>Chip: {{items1.chip}}</a>
+                <a>Ram: {{items1.ram}}</a><br>
+                <a>Memory: {{items1.memory}}</a>
+            </button>
+        </div>
+        <!-- <button type="button" class="btn btn-primary" [routerLink]="[index]" routerLinkActive="active">Xem sản phẩm</button>
+        <button type="button" class="btn btn-warning cart-btn" ><i class="fa fa-cart-plus" aria-hidden="true"></i></button> -->
+    </div>
+</div>
+
+
+<!-- <style>
+    .Products {
+        width: 100%;
+        background-color: royalblue;
+        margin: auto;
+        align-items: center;
+    }
+</style>
+<div class="Products">
+    <div class="intro">
+        <div class="img">
+        </div>
+        <div class="txt-intro">
+            <h3>{{items1.name}}</h3>
+            <h4>{{items1.ram}}</h4>
+            <h4>{{items1.memory}}</h4>
+        </div>
+        <button class="btn1-intro">Xem Chi Tiết</button>
+        <button class="btn2-intro">Thêm Vào Giỏ Hàng</button>
+    </div>
+</div> -->

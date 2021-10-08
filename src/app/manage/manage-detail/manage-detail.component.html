@@ -1,0 +1,157 @@
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    :root {
+        --primary: #08aeea;
+        --secondary: #13D2B8;
+        --purple: #bd93f9;
+        --pink: #ff6bcb;
+        --blue: #8be9fd;
+        --gray: #333;
+        --font: "Poppins", sans-serif;
+        --gradient: linear-gradient(40deg, #ff6ec4, #7873f5);
+        --shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-family: var(--font);
+        font-size: 1.4rem;
+        overflow-x: hidden;
+        font-weight: 300;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font-family: var(--font);
+        outline: none;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+
+    .dropdown {
+        width: 130px;
+        height: 40px;
+        position: relative;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        background-color: #de4b3e;
+    }
+
+    .dropdown:hover{
+        background-color: #c43023;
+    }
+
+
+    .dropdown__item {
+        width: 130px;
+        padding-left: 10px;
+        height: 40px;
+        background-color: #de4b3e;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        color: white;
+        font-size: 15px;
+    }
+
+    .dropdown__item {
+        transition: background-color 0.2s linear;
+    }
+
+    .dropdown__item:first-child {
+        border-radius: 10px 10px 0 0;
+        position: relative;
+    }
+
+    .dropdown__item:first-child:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 3rem;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #de4b3e;
+        transform: translateY(-100%);
+        transition: border-color 0.2s linear;
+    }
+
+    .dropdown__item:first-child:hover:before {
+        border-bottom-color: #c43023;
+    }
+
+    .dropdown__item:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .dropdown__item:hover {
+        background-color: #c43023;
+    }
+
+
+    .row1{
+        margin-top: 50px;
+    }
+</style>
+
+<div class="row row1">
+    <div class="col-sm-12">
+        <h1>{{items1.category}}</h1>
+        <h1>{{items1.name}}</h1>
+        <h3>{{items1.price}}</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="btn-group show" role="group" aria-label="Button group with nested dropdown">
+            <div class="btn-group" role="group" appDropdown>
+                <button type="button" class="dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="false"
+                    aria-expanded="false">
+                    Manage
+                </button>
+                <div class="dropdown-menu " style="border: 0px;" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown__item" style="cursor: pointer;" (click)="onEdit()">Edit</a>
+                    <a class="dropdown__item" style="cursor: pointer;" (click)="onDelete()">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
